@@ -4,6 +4,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.investment.domain.objects.Resource;
+
 public class test {
 
 	/**
@@ -14,7 +16,10 @@ public class test {
 		//AnnotationConfigApplicationContext ac=new AnnotationConfigApplicationContext();
 		//ac.scan("com.investment");
 		GetInfo g=(GetInfo)ac.getBean("getInfo");
-		System.out.println(g.getStockInfo("INFY.NS").getFields().getSymbol());
+		Resource r=g.getStockInfo("INFY.NS");
+		System.out.println(r.getFields().getSymbol());
+		System.out.println(r.getFields().getVolume());
+		System.out.println(r.getFields().getPrice());
 	}
 
 }

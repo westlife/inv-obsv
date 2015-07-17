@@ -23,8 +23,8 @@ public class Tests {
 	public void testResourceNotNull(){
 		GetInfo info=(GetInfo)ac.getBean("getInfo");
 		String symbol="INFY.NS";
-		//assertNotNull(info.getStockInfo(symbol));
-		assert(info.getStockInfo(symbol).getFields().getSymbol().equals(symbol));
+		assertNotNull(info.getStockInfo(symbol));
+		//assert(info.getStockInfo(symbol).getFields().getSymbol().equals(symbol));
 	}
 	
 }

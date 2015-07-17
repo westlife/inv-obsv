@@ -7,29 +7,36 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import org.apache.log4j.Logger;
+
 public class GetQuoteService {
 	
 	private String serviceURL;
 	
 	private String serviceURLAppend;
 
+	private static final Logger logger=Logger.getLogger(GetQuoteService.class);
+	
 	public String getQuote(String symbol){
 		URL url=null;
 		try {
 			url = new URL(serviceURL+symbol+serviceURLAppend);
 		} catch (MalformedURLException e) {	
-			e.printStackTrace();
+			//e.printStackTrace();
+			logger.error(e.getMessage());
 		}
 		String output="";
 		try {
 			HttpURLConnection conn= (HttpURLConnection)url.openConnection();
 			BufferedReader reader=new BufferedReader(new InputStreamReader(conn.getInputStream()));
 			String temp;
-			while((temp=reader.readLine())!=null)
+			while((temp=reader.readLine())!=null){
 				output+=temp;
+			}
 			conn.disconnect();
 		} catch (IOException e) {
-			e.printStackTrace();
+			//e.printStackTrace();
+			logger.error(e.getMessage());
 		}
 		return output;
 	}
