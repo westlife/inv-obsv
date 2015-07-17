@@ -11,7 +11,14 @@
  <!-- xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://jboss.org/schema/cdi/beans_1_0.xsd"> -->
 
 <context:annotation-config />
+<context:property-placeholder location="classpath*:config.properties"/>
+	
+	<bean id="getQuoteService" class="com.investment.services.GetQuoteService">
+	    <property name="serviceURL" value="${serviceUrl}"></property>
+	    <property name="serviceURLAppend" value="${serviceUrlAppend}"></property>
+	</bean>
 
-	<bean id="getInfo" class="com.investment.domain.GetInfo" ></bean>
+	<bean id="getInfo" class="com.investment.domain.GetInfo" >
+	    </bean>
 
 </beans>
