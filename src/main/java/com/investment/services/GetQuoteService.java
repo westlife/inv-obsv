@@ -9,6 +9,8 @@ import java.net.URL;
 
 import org.apache.log4j.Logger;
 
+import com.investment.annotations.Loggable;
+
 public class GetQuoteService {
 	
 	private String serviceURL;
@@ -17,6 +19,7 @@ public class GetQuoteService {
 
 	private static final Logger logger=Logger.getLogger(GetQuoteService.class);
 	
+	@Loggable
 	public String getQuote(String symbol){
 		URL url=null;
 		try {

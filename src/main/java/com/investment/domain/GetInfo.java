@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import com.investment.annotations.Loggable;
 import com.investment.domain.objects.Resource;
 import com.investment.services.GetQuoteService;
 
@@ -18,7 +19,8 @@ public class GetInfo {
 	public GetInfo() {
 		
 	}
-
+	
+	@Loggable
 	public Resource getStockInfo(String symbol){
 		String serviceUrl="http://finance.Yahoo.com/webservice/v1/symbols/"+symbol+"/quote?format=json";
 		String output=getQuoteService.getQuote(symbol);
