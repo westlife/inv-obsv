@@ -9,7 +9,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @Aspect
 public class LoggingAspect {
 
-	@Before("loggableMethod")//"execution(public String getPrice())")
+	@Before("loggableMethod()")//"execution(public String getPrice())")
 	public void logIt(){
 		System.out.println("Called before");
 		
