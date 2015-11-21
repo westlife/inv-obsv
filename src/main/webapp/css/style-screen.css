@@ -1,0 +1,28 @@
+body
+{
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: #d9cdcd;
+}
+.container
+{
+    background-color: white;
+}
+table.striped tbody th
+{
+    text-align: left;
+}
+.centerTable
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+.centerTable td,.centerTable th
+{
+    white-space: nowrap;
+}
+.centerText
+{
+    text-align: center;
+}
