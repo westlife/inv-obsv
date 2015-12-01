@@ -16,8 +16,7 @@
 	<context:property-placeholder location="classpath*:config.properties" />
 	<aop:aspectj-autoproxy />
 
-	<bean id="getQuoteService" class="com.investment.services.GetQuoteService"
-		scope="prototype">
+	<bean id="getQuoteService" class="com.investment.services.GetQuoteService">
 		<property name="serviceURL" value="${serviceUrl}"></property>
 		<property name="serviceURLAppend" value="${serviceUrlAppend}"></property>
 	</bean>
