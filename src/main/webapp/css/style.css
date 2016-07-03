@@ -1,19 +1,18 @@
 .tile{
   box-shadow: -4px -4px 4px 0 rgba(0, 0, 0, 0.2), 4px 4px 4px 0 rgba(0, 0, 0, 0.19);
-  width: 15%;
+  width: 25%;
   border: 5 px;
   border-style: outset;
   transition: all .2s ease-in-out;
   -webkit-transition: all .2s ease-in-out;
   margin: 10% 10% 10% 10%;
-  font-size: 3vmin;
+  
   background-color: white;
   padding: 1%;
 }
 .tile:hover{
   transform: scale(1.1);
   -webkit-transform: scale(1.05);
-  //font-size: 16px;
   cursor: pointer;
 }
 .rightText{
@@ -39,6 +38,8 @@
 	margin: 6%;
 }
 .dashboard{
+	width:100%;	
+}
+.stockImage{
 	width:100%;
-	
 }

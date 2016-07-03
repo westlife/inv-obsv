@@ -8,22 +8,53 @@
 <%@ include file="include/files.jsp" %>
 </head>
 <body>
+<script>
+$(document).ready(function(){
+	$("#mutualFundTile").click(function(e){
+		e.preventDefault();
+		window.location.href="${'http://localhost:8080'}${pageContext.request.contextPath}/investments/mutualFunds.jsp";
+	});
+});
+</script>
 <%-- <%@ include file="include/header.jsp" %> --%>
 <div class="dashboard">
 <div class='tile leftFloated'>
 Stocks <span class="iconRightFloated"><i class="fa fa-line-chart"></i></span>
 <hr class="lessMargin" />
-<p class="rightText">Rs. 22,121</p>
-</div>
-<div class='tile leftFloated'>
-Mutual Fund <span class="iconRightFloated"><i class="fa fa-fax"></i></span>
+<div><img src="images/stock_graph.png" class="stockImage"></img></div>
 <hr class="lessMargin" />
-<p class="rightText">Rs. 2,121</p>
+<p class="rightText">Rs. 22,121</p>
 </div>
 <div class='tile leftFloated'>
 Bonds <span class="iconRightFloated"><i class="fa fa-file"></i></span>
 <hr class="lessMargin" />
+<div>
+<table class="striped">
+<tr>
+<th>Date</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>03<sup>rd</sup> March 2014</td>
+<td>43,212</td>
+</tr>
+<tr>
+<td>03<sup>rd</sup> March 2015</td>
+<td>44,100</td>
+</tr>
+<tr>
+<td>03<sup>rd</sup> March 2016</td>
+<td>45,121</td>
+</tr>
+</table>
+</div>
+<hr class="lessMargin" />
 <p class="rightText">Rs. 45,121</p>
+</div>
+<div class='tile leftFloated' id="mutualFundTile">
+Mutual Fund <span class="iconRightFloated"><i class="fa fa-fax"></i></span>
+<hr class="lessMargin" />
+<p class="rightText">Rs. 2,121</p>
 </div>
 </div>
 </body>
